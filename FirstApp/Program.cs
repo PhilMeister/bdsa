@@ -3,18 +3,31 @@ using FirstApp;
 
 public class Program
 {
+
+    //Refactor with Console.ReadLine()
     public static void Main(string[] args)
     {
-        var input = int.Parse(args[0]);
-        var result = "";
-        
-        var output = LeapYearCheck.IsLeapYear(input) switch
+        if (args != Array.Empty<string>())
         {
-            true => result = "yay",
-            false => result ="nay",
-        };
-
-        Console.WriteLine(result);
+        try {
+            var input = int.Parse(args[0]);
+            if(input >= 1582)
+            {
+                var result = LeapYearCheck.IsLeapYear(input) switch
+                {
+                    true => "yay",
+                    false => "nay",
+                };
+                Console.WriteLine(result);
+            }
+            else
+             Console.WriteLine("year must be higher than 1582");
+        }
+        catch (Exception ex) {
+                    Console.WriteLine("input must be an integer", ex.Message);
+        }
+        }
+        else
         Console.WriteLine("Hello, World!");
 
     }   

@@ -5,8 +5,8 @@ public class IsLeapYearTest
 {
 
 [Theory]
-[InlineData(1353)]
-[InlineData(1354)]
+[InlineData(1653)]
+[InlineData(1654)]
 [InlineData(1800)]
 
     public void IsLeapYear_given_non_leapYear_returns_false(int year)

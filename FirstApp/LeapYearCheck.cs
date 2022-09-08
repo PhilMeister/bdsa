@@ -3,10 +3,9 @@ namespace FirstApp;
 public static class LeapYearCheck
 {
 
-public static bool IsLeapYear(int year)
-{
-    
-    return ((year % 4 == 0) && (year % 100!= 0) || (year % 400 == 0));
-}
+    public static bool IsLeapYear(int year)
+    {
+        return ((year % 4 == 0) && (year % 100!= 0) || (year % 400 == 0));
+    }
 
 }
